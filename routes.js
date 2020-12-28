@@ -10,7 +10,8 @@ module.exports = function (app, db) {
     });
 
     app.get('/', (req, res) => {
-        const id = Number(req.body.id);
+        console.log(req);
+        const id = Number(req.query.id);
         console.log(id);
         db.select(512, 0, 15, 0, 'eq', [id]).then((resp) => { 
             console.log(resp);
@@ -19,6 +20,7 @@ module.exports = function (app, db) {
     });
 
     app.put('/', (req, res) => {
+        console.log(req);
         const entity = { id: req.body.id, title: req.body.title };
         console.log(entity);
         db.update(512, 0, [Number(entity.id)], [['=', 1, entity.title]]).then((resp) => { 
@@ -28,6 +30,7 @@ module.exports = function (app, db) {
     });
 
     app.delete('/', (req, res) => {
+        console.log(req);
         const id = Number(req.body.id);
         db.delete(512, 0,[id]).then((resp) => { 
             console.log(resp);
