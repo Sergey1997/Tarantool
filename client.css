@@ -1,0 +1,38 @@
+input {
+    width: 320px;
+}
+
+span {
+    width: 90px;
+    display: inline-block;
+}
+
+button {
+    width: 60px;
+}
+
+b {
+    font-size: 15pt
+}
+
+i {
+    width: 50px;
+    display: inline-block;
+}
+
+li {
+    font-size: 13pt;    
+}
+
+.btn-indent {
+    margin-left: 54px;
+}
+
+.indent {
+    margin: 10px auto;
+}
+
+.help {
+    width: 413px;
+    background-color: lightyellow;
+}

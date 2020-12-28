@@ -1,8 +1,38 @@
 <html>
     <head>
-
+        <title>Tarantool DB Test</title>
+        <link rel="stylesheet" href="client.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-        
+        <div class="help">
+            <b>How to use it?</b>
+            <ul>
+                <li><i>Create</i> - Use 'Id' and 'Title' to create db entity</li>
+                <li><i>Read</i> - Use only 'Id' input to retrieve db data</li>
+                <li><i>Update</i> - Use 'Id' and 'Title' inputs to update db data</li>
+                <li><i>Delete</i> - Use 'Id' and 'Title' inputs to delete db data</li>
+            </ul>
+        </div>
+        <div>
+            <div class="indent">
+                <span>Entity Id</span>
+                <input id="entity_id" type="text">
+            </div>
+            <div class="indent">
+                <span>Entity Title</span>
+                <input id="entity_title" type="text">
+            </div>
+        </div>
+        <div class="indent"> 
+            <button id="btn_create" type="button" title=>Create</button>
+            <button id="btn_read" type="button" class="btn-indent">Read</button>
+            <button id="btn_update" type="button" class="btn-indent">Update</button>
+            <button id="btn_delete" type="button" class="btn-indent">Delete</button>
+        </div>
+        <div id="response_container" class="indent">
+            <b>Responce area</b>
+        </div>
+        <script src="client.js"></script>
     </body>
 </html>
